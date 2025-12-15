@@ -155,6 +155,27 @@ p {
   background-size: 200%;
 }
 
+.outline-btn {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 20px;
+  font-size: 15px;
+  line-height: 46px;
+  border-radius: 8px;
+  border: 2px solid #119bd2;
+  color: #119bd2;
+  background-color: #fff;
+  transition: all 0.3s ease-out;
+}
+
+.outline-btn:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#33c8c1), color-stop(50%, #119bd2), to(#33c8c1));
+  background: linear-gradient(to right, #33c8c1 0%, #119bd2 50%, #33c8c1 100%);
+  color: #fff;
+  border-color: transparent;
+}
+
 .main-btn:hover {
   color: #fff;
   background-position: right center;
@@ -499,6 +520,14 @@ p {
   padding: 0;
 }
 
+.brand-mark {
+  font-weight: 800;
+  font-size: 22px;
+  color: #2d2a7b;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
 .navbar-toggler {
   padding: 0;
 }
@@ -748,6 +777,22 @@ p {
   }
 }
 
+.brand-note {
+  color: #6a6972;
+  font-weight: 600;
+}
+
+.brand-text {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 10px;
+  background-color: #f2f6ff;
+  color: #2d2a7b;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.06);
+}
+
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .single-logo {
     width: 33.33%;
@@ -970,6 +1015,28 @@ p {
   overflow: hidden;
 }
 
+.project-card {
+  background-color: #fff;
+  padding: 35px;
+  min-height: 100%;
+}
+
+.project-card h4 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.project-list {
+  padding-left: 18px;
+  margin-bottom: 20px;
+}
+
+.project-list li {
+  margin-bottom: 12px;
+  color: #6a6972;
+  line-height: 1.6;
+}
+
 @media (max-width: 767px) {
   .video-wrapper {
     margin-right: 0;
@@ -1159,6 +1226,19 @@ p {
 
 .subscribe-form {
   position: relative;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+  .contact-actions {
+    justify-content: flex-start;
+  }
 }
 
 .subscribe-form input {
