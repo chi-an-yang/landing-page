@@ -3,9 +3,19 @@
 Static landing page using the `free-lite` template. The site is published via GitHub Pages using the workflow in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
 
 ## Deployment
-- The workflow deploys `free-lite/index.html` and its assets to GitHub Pages via GitHub Actions.
-- Push to the `main` branch (or run the workflow manually) to trigger a deployment.
-- Ensure the repository's Pages source is set to **GitHub Actions** in the Pages settings so the workflow output is published.
+
+1. Enable **GitHub Pages** for the repository and choose **GitHub Actions** as the source (Settings → Pages).
+2. Push to the `main` branch or trigger the **Deploy free-lite static site to GitHub Pages** workflow manually from the **Actions** tab.
+3. The workflow uploads everything under `free-lite/` as the published site. If you add new assets, make sure they live in that folder so they are included.
+4. After the workflow completes, the page URL is available in the run summary under the `deployment` step output.
 
 ## Local preview
-Open `free-lite/index.html` in a browser to view the page locally.
+
+Open `free-lite/index.html` directly in a browser, or serve it locally for a closer match to GitHub Pages:
+
+```bash
+cd free-lite
+python -m http.server 8000
+```
+
+Then browse to http://localhost:8000.
